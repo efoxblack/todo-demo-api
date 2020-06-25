@@ -1,16 +1,22 @@
 package com.yearup.todosapidemo.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
 public class Todo {
 
     @Id
+    @GeneratedValue
     private Long id;
 
     private String title;
     private Boolean completed;
+
+    public Todo() {
+
+    }
 
     public Todo(Long id, String title, Boolean completed) {
         this.id = id;
